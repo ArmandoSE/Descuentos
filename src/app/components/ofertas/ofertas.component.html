@@ -1,0 +1,24 @@
+
+<div class="card-columns">
+  <!-- tarjetas ofertas -->
+  <div class="card" *ngFor="let oferta of oferta; let i = index">
+    <!--
+    <img [src]="oferta.img" class="card-img-top" [alt]="heore.nombre" />
+    -->
+    <div class="card-body">
+      <h5 class="card-title">{{oferta.empresa}}</h5>
+      <p class="card-text">
+        {{oferta.descripcion}}
+      </p>
+      <p class="card-text">
+        <small class="text-muted">{{oferta.lugar}}</small>        
+      </p>
+
+      <button type="button"  class="btn btn-outline-primary btn-block">Ver más</button>
+
+    </div>
+  </div>
+
+</div>
+
+<!--(click)="mostrarHeroe(i)"-->
