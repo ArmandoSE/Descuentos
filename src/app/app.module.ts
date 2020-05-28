@@ -11,17 +11,19 @@ import {ofertasService} from './services/ofertas.services';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoginComponent } from './components/shared/login/login.component';
-import { UsuarioComponent } from './components/usuario/usuario.component';
-import { CaruselComponent } from './components/shared/carusel/carusel.component';
 import { OfertasComponent } from './components/ofertas/ofertas.component';
+import { OfertaComponent } from './components/oferta/oferta.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,    
     NavbarComponent, 
-    LoginComponent, 
-    UsuarioComponent, CaruselComponent, OfertasComponent
+    LoginComponent,   
+    OfertasComponent, 
+    OfertaComponent, 
+    AboutComponent
   ],
   imports: [
     BrowserModule,

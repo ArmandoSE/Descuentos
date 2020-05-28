@@ -9,7 +9,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/aquaman.png"
         },
         
         {
@@ -17,7 +17,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/batman.png"
         },
         
         {
@@ -25,14 +25,14 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/daredevil.png"
         },
         {
             empresa : "empresa",
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/hulk.png"
         },
         
         {
@@ -40,7 +40,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/linterna-verde.png"
         },
         
         {
@@ -48,7 +48,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/spiderman.png"
         },
         
         {
@@ -56,7 +56,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/wolverine.png"
         },
         
         {
@@ -64,7 +64,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/wolverine.png"
         },
         
         {
@@ -72,7 +72,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/spiderman.png"
         },
         
         {
@@ -80,7 +80,7 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/linterna-verde.png"
         },
         
         {
@@ -88,31 +88,26 @@ export class ofertasService{
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
+            imagen : "assets/img/hulk.png"
         },
-        
         {
-            empresa : "bichos",
+            empresa : "empresaX",
             fecha : "fecha",
             descripcion : "descripcion",
             lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
-        },
-        
-        {
-            empresa : "wipiz",
-            fecha : "fecha",
-            descripcion : "descripcion",
-            lugar : "todas las sucursales",
-            imagen : "ruta/imagen"
-        }
+            imagen : "assets/img/hulk.png"
+        }                
         
     ];//ofertas
 
     constructor(){}//constructor
 
-    getOferta(){
+    getOfertas(){
         return this.ofertas
+    }//getOferta
+
+    getOferta(idx : string){
+        return this.ofertas[idx]
     }//getOferta
 
 }//class
