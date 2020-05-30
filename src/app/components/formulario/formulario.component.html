@@ -1,0 +1,13 @@
+<form (ngSubmit)="addProduct()">
+<!--toma los datos del documento-->
+  <input type="text" name="titulo" [(ngModel)]="product.titulo">
+  <input type="text" name="fecha" [(ngModel)]="product.fecha">
+  <input type="text" name="nombre" [(ngModel)]="product.nombre">
+  <input type="text" name="imagen" [(ngModel)]="product.imagen">
+  <input type="text" name="descripción" [(ngModel)]="product.descripcion">
+  <input type="text" name="lugar" [(ngModel)]="product.lugar">
+  <input type="numbre" name="precio" [(ngModel)]="product.precioUnidad">
+  <button type="submit">
+  añadir
+  </button>
+</form>
