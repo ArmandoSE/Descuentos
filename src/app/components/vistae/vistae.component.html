@@ -1,0 +1,63 @@
+<h1>Resumen</h1>
+<div>
+    <h1>Datos de tu empresa</h1>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        Añadir productos
+        <app-formulario></app-formulario>
+      </div>
+      <div class="col-sm">
+        Productos en Venta
+        <ul>
+          <!--este for recorre los datos para acomodar con los br-->
+          <li *ngFor="let p of product">
+            <!--aqui mando a llamar los datos de la tabla-->
+            {{p.descripcion}}<br>
+            {{p.fecha}}<br>
+            {{p.imagen}}<br>
+            {{p.lugar}}<br>
+            {{p.nombre}}<br>
+            {{p.precioUnidad}}<br>
+            {{p.titulo}}
+
+            <button (click)="borrarProduct($event, p)">
+              Borrar
+            </button>
+            <button (click)="editProduct($event, p)"> 
+              Editar
+            </button>
+            <div *ngIf="editando && editaProduct.id == this. p.id">
+              <form (ngSubmit)="updateProduct()">
+                <!--Campos del documento para la parte de editar o actualizar productos-->
+                descripción:
+                <input type="text" name="descri" [(ngModel)]="editaProduct.descripcion">
+                fecha:
+                <input type="text" name="fecha" [(ngModel)]="editaProduct.fecha">
+                imagen:
+                <input type="text" name="imagen" [(ngModel)]="editaProduct.imagen">
+                lugar:
+                <input type="number" name="lugar" [(ngModel)]="editaProduct.lugar">
+                nombre:
+                <input type="number" name="nombre" [(ngModel)]="editaProduct.nombre">
+                precio:
+                <input type="number" name="precio" [(ngModel)]="editaProduct.precioUnidad">
+                titulo:
+                <input type="number" name="titulo" [(ngModel)]="editaProduct.titulo">
+
+                <button type="submit">
+                  Actualizar
+                </button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm">
+        Actualizar Productos
+      </div>
+    </div>
+  </div>
+  <h1>Comentarios</h1>

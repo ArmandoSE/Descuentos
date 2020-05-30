@@ -15,7 +15,8 @@ import { OfertasComponent } from './components/ofertas/ofertas.component';
 import { OfertaComponent } from './components/oferta/oferta.component';
 import { AboutComponent } from './components/about/about.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
-
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,14 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     LoginComponent,   
     OfertasComponent, 
     OfertaComponent, 
-    AboutComponent, BuscadorComponent
+    AboutComponent, 
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    AngularFireModule,
+    AngularFirestoreModule
   ],
   providers: [
     ofertasService      
