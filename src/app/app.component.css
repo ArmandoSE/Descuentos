@@ -2,3 +2,18 @@
   background-color: blueviolet;
   color: black; 
 }
+.clase-uno{
+  background-color: gray;
+}
+.clase-dos{
+  background-color: gray;
+}
+
+.centrado{
+text-align: center;
+}
+
+p{
+  font-size: 30px;
+  text-align: left;
+}
