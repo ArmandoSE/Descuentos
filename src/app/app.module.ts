@@ -14,6 +14,7 @@ import { LoginComponent } from './components/shared/login/login.component';
 import { OfertasComponent } from './components/ofertas/ofertas.component';
 import { OfertaComponent } from './components/oferta/oferta.component';
 import { AboutComponent } from './components/about/about.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { AboutComponent } from './components/about/about.component';
     LoginComponent,   
     OfertasComponent, 
     OfertaComponent, 
-    AboutComponent
+    AboutComponent, BuscadorComponent
   ],
   imports: [
     BrowserModule,
