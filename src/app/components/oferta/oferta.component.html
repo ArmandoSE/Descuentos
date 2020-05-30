@@ -1,0 +1,19 @@
+<h1>{{oferta.empresa}}</h1>
+<h3>{{oferta.titulo}}</h3>
+<hr />
+
+<div class="row">
+  <div class="col-md-4">    
+    <img [src]="oferta.imagen" class="card-img-top" [alt]="oferta.empresa" />        
+    <br><br>
+    <a [routerLink] = "['/oferta']" class = "btn btn-outline-primary btn-block" >Regresar</a>
+  </div>  
+
+  <div class="col-md-8">
+    <h3>{{oferta.descripcion}}</h3>
+    <br>
+    <br>    
+    <p>{{oferta.fecha}}</p>
+  </div>
+  
+</div>

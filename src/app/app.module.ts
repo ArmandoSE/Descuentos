@@ -1,28 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import { AppComponent } from './app.component';
-import { BarraNavegacionComponent } from './components/barra-navegacion/barra-navegacion.component';
-import { FormularioComponent } from './components/formulario/formulario.component';
-import { VistaeComponent } from './components/vistae/vistae.component';
-import {environment} from '../environments/environment';
 
+//rutas
+import { app_routing } from './routes';
+
+//servicios
+import {ofertasService} from './services/ofertas.services';
+
+//componentes
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { LoginComponent } from './components/shared/login/login.component';
+import { OfertasComponent } from './components/ofertas/ofertas.component';
+import { OfertaComponent } from './components/oferta/oferta.component';
+import { AboutComponent } from './components/about/about.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
-    AppComponent,
-    BarraNavegacionComponent,
-    FormularioComponent,
-    VistaeComponent
+    AppComponent,    
+    NavbarComponent, 
+    LoginComponent,   
+    OfertasComponent, 
+    OfertaComponent, 
+    AboutComponent, 
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    FormsModule
+    app_routing,
+    AngularFireModule,
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [
+    ofertasService      
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

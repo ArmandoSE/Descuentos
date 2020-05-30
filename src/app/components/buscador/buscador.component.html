@@ -1,0 +1,30 @@
+<h1>Buscando: <small>{{termino}}</small> </h1>
+<hr>
+
+
+<div class="card-columns">
+  <!-- tarjetas ofertas -->
+  <div class="card" *ngFor="let oferta of ofetas; let i = index">
+    <p>La imagen y el producto pueden variar</p>
+    
+    <img [src]="oferta.imagen" class="card-img-top" [alt]="oferta.empresa" />
+    
+    <div class="card-body">
+      <h5 class="card-title">{{oferta.empresa}}</h5>
+      <p class="card-text">
+        {{oferta.titulo}}
+      </p>
+      <p class="card-text">
+        <small class="text-muted">aplica en: {{oferta.lugar}}</small>        
+      </p>
+      <p class="card-text">
+        <small class="text-muted">valido del {{oferta.fecha}}</small>        
+      </p>
+
+      <!--
+      <button type="button" (click) = "mostrarOferta(i)"  class="btn btn-outline-primary btn-block">Ver más</button>
+      -->
+    </div>
+  </div>
+
+</div>
